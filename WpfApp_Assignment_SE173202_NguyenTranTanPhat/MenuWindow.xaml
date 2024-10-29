@@ -1,0 +1,50 @@
+﻿<Window x:Class="WpfApp_Assignment_SE173202_NguyenTranTanPhat.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MenuWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/wallhaven-6de6wl.png"/>
+        </Grid.Background>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Menu" 
+                       FontSize="24" 
+                       FontWeight="Bold" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,0,0,20"/>
+            <Button Name="btnUserManagement" 
+                    Content="User Management" 
+                    Width="200" 
+                    Height="50" 
+                    Margin="5" 
+                    Background="#2196F3" 
+                    Foreground="White" 
+                    Click="BtnUserManagement_Click"/>
+            <Button Name="btnClassManagement" 
+                    Content="Class Management" 
+                    Width="200" 
+                    Height="50" 
+                    Margin="5" 
+                    Background="#4CAF50" 
+                    Foreground="White" 
+                    Click="BtnClassManagement_Click"/>
+            <Button x:Name="btnAssignStudentToClass" 
+                Content="User Class Management" 
+                Width="200" 
+                Height="50" 
+                Background="#FFE4766B" 
+                Foreground="White" Click="btnAssignStudentToClass_Click"/>
+            <Button Name="btnExit" 
+                    Content="Exit" 
+                    Width="200" 
+                    Height="50" 
+                    Margin="5" 
+                    Background="#F44336" 
+                    Foreground="White" 
+                    Click="BtnExit_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
