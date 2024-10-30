@@ -10,7 +10,7 @@
             <ImageBrush ImageSource="/wallhaven-6de6wl.png"/>
         </Grid.Background>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Text="Menu" 
+            <TextBlock x:Name="lblWelcome" Text="Menu" 
                        FontSize="24" 
                        FontWeight="Bold" 
                        HorizontalAlignment="Center" 
@@ -22,7 +22,7 @@
                     Margin="5" 
                     Background="#2196F3" 
                     Foreground="White" 
-                    Click="BtnUserManagement_Click"/>
+                    Click="BtnUserManagement_Click" Cursor="Hand"/>
             <Button Name="btnClassManagement" 
                     Content="Class Management" 
                     Width="200" 
@@ -30,13 +30,12 @@
                     Margin="5" 
                     Background="#4CAF50" 
                     Foreground="White" 
-                    Click="BtnClassManagement_Click"/>
+                    Click="BtnClassManagement_Click" Cursor="Hand"/>
             <Button x:Name="btnAssignStudentToClass" 
                 Content="User Class Management" 
                 Width="200" 
                 Height="50" 
-                Background="#FFE4766B" 
-                Foreground="White" Click="btnAssignStudentToClass_Click"/>
+                Foreground="White" Click="btnAssignStudentToClass_Click" Background="#FFE4766B" Cursor="Hand"/>
             <Button Name="btnExit" 
                     Content="Exit" 
                     Width="200" 
@@ -44,7 +43,7 @@
                     Margin="5" 
                     Background="#F44336" 
                     Foreground="White" 
-                    Click="BtnExit_Click"/>
+                    Click="BtnExit_Click" Cursor="Hand"/>
         </StackPanel>
     </Grid>
 </Window>

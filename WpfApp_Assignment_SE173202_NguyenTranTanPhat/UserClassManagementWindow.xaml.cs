@@ -25,18 +25,6 @@ namespace WpfApp_Assignment_SE173202_NguyenTranTanPhat
             dgUserClass.ItemsSource = userClasses;
         }
 
-        private void btnCreate_Click(object sender, RoutedEventArgs e)
-        {
-            AssignUserToClassWindow assignUserToClassWindow = new AssignUserToClassWindow();
-            assignUserToClassWindow.Show();
-            this.Close();
-        }
-
-        private void btnUpdate_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             if (this.selectedUserClass == null)
@@ -79,6 +67,13 @@ namespace WpfApp_Assignment_SE173202_NguyenTranTanPhat
             UserClass userClass = this.userClassService.GetUserClassById(id);
             this.selectedUserClass = userClass;
 
+        }
+
+        private void btnAssign_Click(object sender, RoutedEventArgs e)
+        {
+            AssignUserToClassWindow assignUserToClassWindow = new AssignUserToClassWindow();
+            assignUserToClassWindow.Show();
+            this.Close();
         }
     }
 }

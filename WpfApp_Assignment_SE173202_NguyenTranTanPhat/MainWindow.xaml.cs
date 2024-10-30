@@ -44,6 +44,8 @@ namespace WpfApp_Assignment_SE173202_NguyenTranTanPhat
             {
                 if (account.Role.RoleId == 1)
                 {
+                    LoggedInUser.Name = account.Name;
+                    LoggedInUser.UserId = account.UserId;
                     MenuWindow menuWindow = new MenuWindow();
                     menuWindow.Show();
                     this.Close();

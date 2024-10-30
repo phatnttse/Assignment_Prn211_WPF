@@ -26,11 +26,9 @@
                 <DataGridTextColumn Header="Class Name" Binding="{Binding Class.ClassName}" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
-
-        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="284,115,0,0" VerticalAlignment="Top" Height="40" Width="96" Background="#FF88CCDE" Foreground="White" Cursor="Hand" Click="btnUpdate_Click"/>
-        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="421,115,0,0" VerticalAlignment="Top" Height="40" Width="96" Background="#FFE23737" Foreground="White" Cursor="Hand" Click="btnDelete_Click"/>
-        <Button x:Name="btnMenu" Content="Menu" HorizontalAlignment="Left" Margin="555,115,0,0" VerticalAlignment="Top" Height="40" Width="96" Background="#FFF1E5AC" Foreground="#FF333333" Cursor="Hand" Click="btnMenu_Click"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="366,115,0,0" VerticalAlignment="Top" Height="40" Width="96" Background="#FFE23737" Foreground="White" Cursor="Hand" Click="btnDelete_Click"/>
+        <Button x:Name="btnMenu" Content="Menu" HorizontalAlignment="Left" Margin="507,115,0,0" VerticalAlignment="Top" Height="40" Width="96" Background="#FFF1E5AC" Foreground="#FF333333" Cursor="Hand" Click="btnMenu_Click"/>
         <Label x:Name="txtUsername_Copy" Content="User Class Management" HorizontalAlignment="Left" Margin="17,13,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.458,1.035" FontSize="24" FontWeight="Bold" Foreground="#FF9A254B"/>
-        <Button x:Name="btnCreate" Content="Create" HorizontalAlignment="Left" Margin="139,115,0,0" VerticalAlignment="Top" Height="40" Width="96" Background="#FF86E65C" Foreground="White" Cursor="Hand" Click="btnCreate_Click"/>
+        <Button x:Name="btnAssign" Content="Assign" HorizontalAlignment="Left" Margin="233,115,0,0" VerticalAlignment="Top" Height="40" Width="96" Background="#FF86E65C" Foreground="White" Cursor="Hand" Click="btnAssign_Click"/>
     </Grid>
 </Window>

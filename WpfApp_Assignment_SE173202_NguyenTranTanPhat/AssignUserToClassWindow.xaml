@@ -33,9 +33,9 @@
                 </ListBox.ItemTemplate>
             </ListBox>
 
-            <Button x:Name="btnAssign" Content="Assign Selected Students to Class" Click="btnAssign_Click" Height="40" Margin="0,20,0,0" Background="#FF15B1BD"/>
+            <Button x:Name="btnAssign" Content="Assign Selected Students to Class" Click="btnAssign_Click" Height="40" Margin="0,20,0,0" Background="#FF15B1BD" Width="437"/>
         </StackPanel>
-        <Button x:Name="btnMenu" Content="Menu" HorizontalAlignment="Left" Margin="664,0,0,0" VerticalAlignment="Top" Height="40" Width="96" Background="#FFF1E5AC" Foreground="#FF333333" Cursor="Hand" Click="btnMenu_Click"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="551,0,0,0" VerticalAlignment="Top" Height="40" Width="96" Background="#FFD6372F" Foreground="#FF333333" Cursor="Hand" Click="btnBack_Click"/>
+        <Button x:Name="btnMenu" Content="Menu" HorizontalAlignment="Left" Margin="657,0,0,0" VerticalAlignment="Top" Height="40" Width="96" Background="#FFF1E5AC" Foreground="#FF333333" Cursor="Hand" Click="btnMenu_Click"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="538,0,0,0" VerticalAlignment="Top" Height="40" Width="96" Background="#FFD6372F" Foreground="#FF333333" Cursor="Hand" Click="btnBack_Click"/>
     </Grid>
 </Window>

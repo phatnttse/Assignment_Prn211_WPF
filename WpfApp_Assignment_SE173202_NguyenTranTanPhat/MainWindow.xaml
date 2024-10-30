@@ -31,7 +31,7 @@
             <ImageBrush ImageSource="/wallhaven-6de6wl.png"/>
         </Grid.Background>
 
-        <Border CornerRadius="15" Background="White" Padding="30" Margin="50" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="#FFCCCCCC" BorderThickness="1">
+        <Border CornerRadius="15" Background="White" Padding="30" Margin="0,43,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" BorderBrush="#FFCCCCCC" BorderThickness="1">
             <StackPanel>
                 <TextBlock Text="Sign In" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
 

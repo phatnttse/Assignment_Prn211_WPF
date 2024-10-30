@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using BusinessObjects.Models;
+using System.Windows;
 
 
 namespace WpfApp_Assignment_SE173202_NguyenTranTanPhat
@@ -11,6 +12,7 @@ namespace WpfApp_Assignment_SE173202_NguyenTranTanPhat
         public MenuWindow()
         {
             InitializeComponent();
+            this.lblWelcome.Text = $"Hi, {LoggedInUser.Name}";
         }
 
         private void BtnUserManagement_Click(object sender, RoutedEventArgs e)

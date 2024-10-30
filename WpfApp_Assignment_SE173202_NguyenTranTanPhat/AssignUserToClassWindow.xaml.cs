@@ -12,26 +12,26 @@ namespace WpfApp_Assignment_SE173202_NguyenTranTanPhat
         private readonly IUserService userService;
         private readonly IUserClassService userClassService;
 
-        public AssignUserToClassWindow()
+        public AssignUserToClassWindow(UserClass userClass = null)
         {
             InitializeComponent();
             classService = new ClassService();
             userService = new UserService();
             userClassService = new UserClassService();
 
-            LoadClasses();
-            LoadStudents();
+            this.LoadClasses();
+            this.LoadStudents();
         }
 
         private void LoadClasses()
         {
             // Lấy danh sách các lớp từ service và gán vào ComboBox
-            cbClasses.ItemsSource = classService.GetAllClasses();
+            this.cbClasses.ItemsSource = this.classService.GetAllClasses();
         }
 
         private void LoadStudents()
         {
-            lbStudents.ItemsSource = userService.GetUsersByRole((int)RoleName.Student);
+            this.lbStudents.ItemsSource = this.userService.GetUsersByRole((int)RoleName.Student);
         }
 
         private void cbClasses_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -41,13 +41,13 @@ namespace WpfApp_Assignment_SE173202_NguyenTranTanPhat
 
         private void btnAssign_Click(object sender, RoutedEventArgs e)
         {
-            if (cbClasses.SelectedItem == null)
+            if (this.cbClasses.SelectedItem == null)
             {
                 MessageBox.Show("Please select a class!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            Class selectedClass = cbClasses.SelectedItem as Class;
+            Class selectedClass = this.cbClasses.SelectedItem as Class;
 
             // Lấy danh sách các học sinh được chọn
             List<User> selectedStudents = new List<User>();
@@ -65,7 +65,7 @@ namespace WpfApp_Assignment_SE173202_NguyenTranTanPhat
             // Thực hiện gán học sinh vào lớp
             foreach (User student in selectedStudents)
             {
-                if (userClassService.GetUserClassByUserIdAndClassId(student.UserId, selectedClass.ClassId) != null)
+                if (this.userClassService.GetUserClassByUserIdAndClassId(student.UserId, selectedClass.ClassId) != null)
                 {
                     MessageBox.Show($"The student {student.Name} has already been assigned to the class!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
