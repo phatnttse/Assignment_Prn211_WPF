@@ -41,29 +41,19 @@ namespace WpfApp_Assignment_SE173202_NguyenTranTanPhat
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            DataGrid dataGrid = sender as DataGrid;
-
-            if (dataGrid.SelectedItem == null)
+            if (dtgUsers.SelectedItem == null)
                 return;
 
-            DataGridRow row = (DataGridRow)dataGrid.ItemContainerGenerator.ContainerFromItem(dataGrid.SelectedItem);
-            if (row == null)
+            this.selectedUser = dtgUsers.SelectedItem as User;
+            if (this.selectedUser == null)
                 return;
 
-            DataGridCell RowColumn = dataGrid.Columns[0].GetCellContent(row).Parent as DataGridCell;
-            if (RowColumn == null)
-                return;
-
-            int id = int.Parse(((TextBlock)RowColumn.Content).Text);
-            User user = this.userService.GetUserById(id);
-            this.selectedUser = user;
-
-            txtUserName.Text = user.UserName;
-            txtPassword.Password = user.Password;
-            txtName.Text = user.Name;
-            txtEmail.Text = user.Email;
-            dpDateOfBirth.SelectedDate = user.DateOfBirth;
-            cboRole.SelectedValue = user.RoleId;
+            txtUserName.Text = selectedUser.UserName;
+            txtPassword.Password = selectedUser.Password;
+            txtName.Text = selectedUser.Name;
+            txtEmail.Text = selectedUser.Email;
+            dpDateOfBirth.SelectedDate = selectedUser.DateOfBirth;
+            cboRole.SelectedValue = selectedUser.RoleId;
         }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
@@ -97,17 +87,16 @@ namespace WpfApp_Assignment_SE173202_NguyenTranTanPhat
                 return;
             }
 
-            User user = this.userService.GetUserById(this.selectedUser.UserId);
+            User updateUser = this.userService.GetUserById(this.selectedUser.UserId);
 
-            user.UserName = txtUserName.Text;
-            user.Password = txtPassword.Password;
-            user.Name = txtName.Text;
-            user.Email = txtEmail.Text;
-            user.DateOfBirth = (DateTime)dpDateOfBirth.SelectedDate.Value;
-            user.RoleId = (int)cboRole.SelectedValue;
+            updateUser.UserName = txtUserName.Text;
+            updateUser.Password = txtPassword.Password;
+            updateUser.Name = txtName.Text;
+            updateUser.Email = txtEmail.Text;
+            updateUser.DateOfBirth = (DateTime)dpDateOfBirth.SelectedDate.Value;
+            updateUser.RoleId = (int)cboRole.SelectedValue;
 
-            this.userService.UpdateUser(user);
-            this.resetData();
+            this.userService.UpdateUser(updateUser);
             this.LoadInitData();
         }
 
